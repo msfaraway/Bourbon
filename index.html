@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bourbon Landing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+</head>
+<body>
+  <header class="site-header">
+  <div class="header-overlay">
+    <nav class="nav-links">
+      <a href="file:///C:/Users/farha/OneDrive/Desktop/bourbon/roadmap.html">ROADMAP</a>
+      <a href="file:///C:/Users/farha/OneDrive/Desktop/bourbon/index.html">GET FREE TOKEN</a>
+      <a href="https://x.com/bourboncoinX"> FOLLOW US ON <i class="fa-brands fa-x-twitter"></i></a>
+</nav>
+    </div>
+  </div>
+</header>
+
+  <div class="hero">
+    <div class="overlay"></div>
+    <div class="content">
+      <img class="logo-full" src="./assets/BourbonCoin-logo.png" alt="Full Logo"/>
+      <h1>Batch0 - A Quiet Start.<span><br> A Bold Future.</span></h1>
+      <p class="biggerp"><strong>Be there before it begins. </strong><br>
+      Batch0 is your early invitation into something big. We’re starting small, quietly — just like a fine bourbon ages in silence before making history.</p>
+      <div class="button-container">
+        <a href="https://bourboncoin.app/?mode=start"><button class="btn">GET STARTED</button></a>
+        <a href="https://bourboncoin.com/tasting/"><button class="btn">LEARN MORE</button></a>
+      </div>
+	  
+ 
+    </div>
+  </div>
+
+  <div class="section2 hero">
+      <h2>Get a Free Taste</h2>
+	  	  <p class="biggerp"><strong>Offer Ends</strong><br></p>
+  <div id="countdown">00:00:00:00</div>
+
+  <script>
+    const countdownDate = new Date(new Date().getTime() + ((11 * 3600 + 26 * 60 + 50) * 1000));
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
+
+      if (distance < 0) {
+        document.getElementById("countdown").innerHTML = "00:00:00:00";
+        return;
+      }
+
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+      document.getElementById("countdown").innerHTML =
+        `${String(days).padStart(2, '0')} : ${String(hours).padStart(2, '0')} : ${String(minutes).padStart(2, '0')} : ${String(seconds).padStart(2, '0')}`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+      <section class="slider-section">
+        <div class="slider-container">
+          <div class="slider" id="slider">
+            <div class="slide yellow">
+             <img src="./assets/Bourby1.png" alt="NFT wizard" class="card-image">
+            </div>
+            <div class="slide purple">
+              <img src="./assets/BourbonCoin.png" alt="NFT wizard" class="card-image">
+            </div>
+          </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="js/countdown.js"></script>
+  <script src="js/slider.js"></script>
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.to(".hero", {
+        scrollTrigger: {
+          trigger: ".hero",
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+          pin: true
+        }
+      });
+
+      gsap.to(".content", {
+        opacity: 0,
+        scale: 0.95,
+        scrollTrigger: {
+          trigger: ".hero",
+          start: "top top",
+          end: "bottom top",
+          scrub: true
+        }
+      });
+    });
+  </script>
+</body>
+</html>

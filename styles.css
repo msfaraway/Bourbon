@@ -1,0 +1,366 @@
+@import url("./css/kelvingrove-regular.css");
+
+:root {
+  --primary-brand: #42210B;
+  --brand-analogous-green: #423D0B;
+  --brand-analogous-brown: #420B10;
+  --brand-monochromatic: #6E3712;
+  --brand-natural-orange: #d97738;
+  --brand-natural-offwhite: #fff5e9;
+  --brand-natural-grey: #dfe0df;
+  --brand-matching-brown: #54433a;
+  --brand-matching-tan: #bca79c;
+  --brand-matching-darkgreen: #00493f;
+  --brand-matching-green: #367a6f;
+  --brand-squash-green: #004e4e;
+  --brand-squash-purple: #622a5c;
+  --brand-grayfriends-brown: #54433a;
+  --brand-grayfriends-tan: #bca79c;
+  --brand-dotting-tan: #bca79c;
+  --brand-dotting-darkgreen: #0c3015;
+  --brand-dotting-green: #a0afa1;
+  --brand-threedom-green: #005b48;
+  --brand-threedom-blue: #383b7a;
+  --brand-highlight-orange: #e27126;
+  --brand-highlight-grey: #dfe0df;
+  --brand-highlight-brown: #402E32;
+}
+
+body, html {
+  background: url('./assets/bgbrown.webp') no-repeat center center / cover;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: 'Rubik', sans-serif;
+}
+
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+}
+
+.logo-full {
+  width: 70%;
+  max-width: 780px;
+  height: auto;
+}
+
+.content {
+  z-index: 1;
+  max-width: 800px;
+}
+
+h1 {
+  font-family: 'Kelvingrove-Regular', serif;
+  font-size: 5.5rem;
+  font-weight: 400;
+}
+
+h2, h3 {
+  font-family: 'Kelvingrove-Regular', serif;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+h1 span {
+  color: #412311;
+}
+
+.btn {
+	font-family: 'Rubik', sans-serif;
+  width: 200px;
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: 1px solid #d2b075;
+  color: #d2b075;
+  background-color:#0C3015;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #42210B;
+  color: #fff;
+}
+
+.section2 {
+  padding: 60px 20px;
+  background-color: #0c3015d9;
+  color: #fff;
+  text-align: left;
+  max-width: 1000%;
+  margin: auto;
+}
+.biggerp{
+	font-size:20px;
+	text-transform:uppercase;
+}
+.section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .button-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.site-header {
+	padding-top:30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px 40px;
+  backdrop-filter: blur(5px);
+}
+
+.header-overlay {
+  display: flex;
+  gap: 40px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #d97738;
+}
+
+.social-icons a {
+  color: #fff;
+  margin-left: 15px;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #d97738;
+}
+
+.social-icon a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #c0a165;
+  font-size: 12px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.social-icon a:hover {
+  color: #fff;
+}
+
+.social-icon i {
+  font-size: 18px;
+}
+
+.cta-button button {
+  background: transparent;
+  border: 1px solid #c0a165;
+  color: #c0a165;
+  padding: 10px 20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cta-button button:hover {
+  background-color: #c0a165;
+  color: #12100e;
+}
+
+footer {
+  margin-top: 30px;
+  font-family: 'Kelvingrove-Regular', serif;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+#countdown {
+      font-size: 22px;
+      font-weight: bold;
+      background-color: #53462c;
+      color: #ff9933;
+      padding: 10px 20px;
+      display: inline-block;
+      border-radius: 5px;
+      letter-spacing: 4px;
+      font-family: 'Courier New', Courier, monospace;
+      box-shadow: 0 0 8px #ff9933;
+    }
+	
+	
+	
+	
+	/* ROAD MAP CSS */
+	
+	.timeline {
+  border-left: 2px solid #d97738;
+  padding-left: 40px;
+  margin: 0 auto;
+  max-width: 900px;
+  position: relative;
+}
+
+.year {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 60px 0 20px;
+  color: #d97738;
+}
+
+.milestone {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.milestone::before {
+  content: "";
+  position: absolute;
+  left: -43px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  background-color: #d97738;
+  border-radius: 50%;
+}
+
+.milestone-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.milestone-desc {
+  margin-top: 4px;
+  color: #dfe0df;
+  font-size: 0.95rem;
+}
+
+/* SLIDER */
+.slider-section .label {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  background: #fff;
+  padding: 8px 16px;
+  display: inline-block;
+  border-radius: 24px;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.slider {
+	    margin-top: 40px;
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.slide {
+  min-width: 250px;
+  max-width: 350px;
+  margin-right: 20px;
+  border-radius: 20px;
+  color: #fff;
+  flex-shrink: 0;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card-image {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.nav-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.nav-buttons button {
+  background: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  margin: 0 5px;
+  border-radius: 12px;
+  cursor: pointer;
+}
