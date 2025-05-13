@@ -53,3 +53,62 @@ body {
   color: #dfe0df;
   font-size: 0.95rem;
 }
+
+
+
+.header-overlay {
+  display: flex;
+  gap: 40px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #d97738;
+}
+
+.social-icons a {
+  color: #fff;
+  margin-left: 15px;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #d97738;
+}
+
+.social-icon a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #c0a165;
+  font-size: 12px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.social-icon a:hover {
+  color: #fff;
+}
+
+.social-icon i {
+  font-size: 18px;
+}
